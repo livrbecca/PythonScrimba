@@ -9,7 +9,7 @@
 
 # Escaping
 # example: want to save the word 'it's' as a variable
-# 'it/s' - the back slash tells use the character you see, not interpret it as something else
+# 'it/'s' - the back slash tells use the character you see, not interpret it as something else
 
 # Knowing what datatype you're dealing with, use type
 print(type('hello'))
@@ -40,6 +40,7 @@ print(msg.lower())
 print(msg.capitalize())  # only the first letter
 print(msg.title())  # capitalize each letter
 print(len(msg))  # length of string
+# count different to len/length
 print(msg.count('python'))  # returns 0 because its case sensitive
 print(msg.count('Python'))  # 1, counts instances
 
@@ -47,8 +48,8 @@ print(msg.count('Python'))  # 1, counts instances
 # starts at 0
 print(msg[0])  # returns w
 print(msg[-1])  # gives the last character
-print(msg[2:])  # grabs everything after the 2nd character
-print(msg[2:15])  # the 15 is specifing an endpoint
+print(msg[2:] + " this")  # grabs everything AFTER the 2nd character (e)
+print(msg[2:15])  # the 15 is specifing an endpoint, after 2nd and stops at 15th character
 
 one = msg[18]
 print(one)
@@ -64,7 +65,7 @@ print(msg[::-1].title())  # prints string backwards
 txt = "Hello my name is Olivia"
 print(txt.replace("Olivia", "Liv"))
 
-# Membership
+# Membership 'in'
 print("Hello" in txt)  # True
 print("food" in txt)  # False
 
@@ -72,7 +73,7 @@ print("food" in txt)  # False
 name = 'TERRY'
 color = 'RED'
 sentence = '[' + name + '] loves the color ' + color.lower() + '!'
-# formatted
+# formatted, dont forget the 'f'
 sentence1 = f'[{name.capitalize()}] loves the color {color.lower()}!'
 print(sentence)
 print(sentence1)
@@ -91,14 +92,14 @@ print(sentence1)
 # Lists
 friends = ["allie", "john", "bee", "amy", "lia"]
 print(friends[2])
-print(friends[2:5])
-print(len(friends))
-print(friends.index("bee"))
+print(friends[2:5]) # after the 2nd, counting from 1 not zero
+print(len(friends)) #5
+print(friends.index("bee")) #2, counting from 0 when its index
 print(friends.count("lia"))
 
 numbers = [1, 100, 3, 300, 4, 500, 11]
 
-numbers.sort()
+numbers.sort() # sorts in place
 print(numbers)
 
 numbers.sort(reverse=True)
@@ -109,11 +110,11 @@ print(max(numbers))
 print(sum(numbers))
 
 # Adding to the list
-numbers.insert(1, 900)  # inserted at position/index 1
+numbers.insert(1, 900)  # inserted at position/index 1, its still in reverse from the above
 print(numbers)
 
 # Copy list
-new_numbers = numbers.copy()
+new_numbers = numbers.copy() # difference between copy v deep copy?
 
 # list exercise
 
@@ -136,12 +137,12 @@ new_numbers = numbers.copy()
 # Split and join
 
 aa = "Welcome Olivia, how are you"
-print(list(aa))  # each character
-print(aa.split())  # splits words into a list
+print(list(aa))  # splits each character including empty spaces
+print(aa.split())  # splits words into a list/array
 
 # Tuples & Sets
 # Tuples - faster Lists you can't change, immutable
-# Unordered, removes any duplicates, faster atfinding members inside than lists are
+# Sets - unordered, removes any duplicates, faster at finding members inside than lists are
 friends1 = ['John', 'Michael', 'Terry', 'Eric', 'Graham']
 friends_tuple = ('John', 'Michael', 'Terry', 'Eric', 'Graham')
 friends_set = {'John', 'Michael', 'Terry', 'Eric', 'Graham', 'Eric'}
@@ -149,7 +150,8 @@ print(friends1)
 print(friends_tuple)
 print(friends_set)
 
-# Print names that are in both - Intersection
+# Print names that are in both - 'Intersection'
+# first_comparison_variable.intersection(second_comparison_variable)
 
 my_friends_set = {'Reg', 'Loretta', 'Colin', 'Eric', 'Graham'}
 
@@ -168,7 +170,7 @@ cars = ['900', '420', 'V70', '911', '996','V90', '911', '911', 'S', '328', '900'
 # 1
 print('Eric' in friends2 and 'John' in friends2)
 
-# 2 - how to combine sets, unordered and no duplicates -  shorter way, | means union
+# 2 - how to combine SETS, unordered and no duplicates -  shorter way, | means union
 print(friends2.union(my_friends))
 print(friends2 | my_friends)
 

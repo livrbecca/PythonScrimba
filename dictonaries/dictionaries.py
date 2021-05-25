@@ -24,17 +24,17 @@ print(movie)
 
 #commands
 #movie.update({})
-#del movie['year']
-print(movie.items())
-print(movie.keys())
-print(movie.values())
+#d el movie['year']
+print(movie.items(), "items") # pair
+print(movie.keys(), "keys") # left
+print(movie.values(), "values") # right
 
 #loop through items in D
 
 for key, value in movie.items():
     print(key, value)
 
-# putting dictionaries together 
+# putting dictionaries together, 3 methods
 
 python = {'John':35,'Eric':36,'Michael':35,'Terry':38,'Graham':37,'TerryG':34}
 holy_grail = {'Arthur':40,'Galahad':35,'Lancelot':39,'Knight of NI':40, 'Zoot':17}
