@@ -19,6 +19,9 @@
 
 # return runningTotal
 
+
+# method one
+
 def sumList(arr):
     runningTotal = 0
     for n in arr:
@@ -27,3 +30,12 @@ def sumList(arr):
 
 
 sumList([5, 10, 1])
+
+# method two
+
+def sumList2(arr):
+    total = sum(arr)
+    print(total)
+
+
+sumList2([5, 10, 1])
