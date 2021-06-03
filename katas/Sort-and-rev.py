@@ -1,15 +1,34 @@
+
 # make the largest number out of the input
 # 54421
 
 def des(num):
-    num1 = str(num)
-    num2 = sorted(num1)
-    rev_num = num2[::-1]
+    num1 = str(num) # "12634536345"
+    num2 = sorted(num1) #"12345"
+    rev_num = num2[::-1] # reverse num 2 - 1 2 34 
     joined_nums = int("".join(rev_num))
     print(joined_nums)
 
 
 des(1234)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # bus exercise
